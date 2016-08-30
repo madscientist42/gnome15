@@ -1,12 +1,27 @@
 STATUS OF GNOME15
 =================
 
-Gnome15 is currently **not complete maintained**.
-The original primary repository has been unavailable since November 2014 due to a hosting server crash.
-This fork was made to add a feature and has not been updated since November 2013, but it appears to be the latest snapshot of the repository that is currently publicly available.
+Gnome15 is currently **not complete maintained**.  In fact, this fork of the sources is here for the sole purpose
+of winnowing out a bunch of the stuff to come up with a more svelte, optimized version of the system that removes
+a BUNCH of the old cruft (including all the kernel support drivers- those were...ill advised...and frowned upon
+at this time by the LKML crowd and for good reasons...), putting the driver on a more maintainable footing.
 
-I intend to bring this repository up to date with the latest version (the version before the server crash) using the code contained in the latest distribution packages available.
-We want to maintain it, so many we can. Feel free to work with.
+Ultimately, only the plugins themselves are not "subject to reconsideration" in this fork of the forks because
+they don't need to change except minimally at most right now.  Driver, daemon, etc. are not exactly what I'd 
+call "great" and the code's suffered bitrot due to drift in the Python environments on most distributions 
+since this code all drives hardware directly or provides daemon services.  
+
+The original primary repository has been unavailable since November 2014 due to a hosting server crash.
+This fork was made to add a feature and has not been updated since November 2013, but it appears to be the latest 
+snapshot of the repository that is currently publicly available.  This is the working fork associated with
+the currently extant fork directly associated with gnome15.org and had updates from the people associated
+with the same as of 6 months ago (08/30/2016).  It was forked because of the nature of what I (madscientist42)
+am about to do with it, due to my having a clean, nearly complete HID raw library interface to G15 devices
+that is much, much more stable than the ones bundled in this project.  I'm applying a massive wrecking ball
+to everything with the intent of providing this back to the project or maintaining the fork under the 
+auspices of a new name/code core if it's not accepted back.
+
+
 
 Gnome15
 =======
